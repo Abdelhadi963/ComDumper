@@ -1,7 +1,7 @@
 # ComDumper
 
 A Simple C# red team tool to enumerate and analyze COM registry objects for hijackable entries, missing binary paths, access control misconfigurations, and simulate persistence via registry modification.
-For more details about COM exploitation demos, take a look at my [blog](https://yokaiswikie.gitbook.io/com-object-enumeration/)
+For more details about COM exploitation demos, take a look at my [blog](https://yokaiswikie.gitbook.io/com-object-enumeration/).
 ## Compiling code using VS csc compiler
 
 ```powershell
