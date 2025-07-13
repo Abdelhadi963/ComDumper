@@ -5,7 +5,9 @@ For more details about COM exploitation demos, take a look at my [blog](https://
 ## Compiling code using VS csc compiler
 
 ```powershell
-csc /r:System.DirectoryServices.AccountManagement.dll ComDumperV.cs /out:ComDumper.exe
+csc /r:System.DirectoryServices.AccountManagement.dll ComDumper.cs /out:ComDumper.exe
+# x64
+csc /r:System.DirectoryServices.AccountManagement.dll ComDumper.cs /out:ComDumper64.exe /platform:x64
 ```
 ## Usage
 
