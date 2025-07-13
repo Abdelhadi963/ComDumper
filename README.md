@@ -6,7 +6,6 @@ For more details about COM exploitation demos, take a look at my [blog](https://
 
 ```powershell
 csc /r:System.DirectoryServices.AccountManagement.dll ComDumper.cs /out:ComDumper.exe
-# x64
 csc /r:System.DirectoryServices.AccountManagement.dll ComDumper.cs /out:ComDumper64.exe /platform:x64
 ```
 ## Usage
